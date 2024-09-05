@@ -1,0 +1,127 @@
+#N canvas 0 24 1676 1005 10;
+#X obj 293 159 image mainimg.gif;
+#X obj 195 -197 bng 25 50 10 0 LOADFILE empty LOAD_FILE 30 13 1 20
+-204786 -1 -1;
+#X obj 195 -156 bng 25 250 50 0 PLAYORIGINAL empty PLAY_FILE 30 13
+1 20 -4034 -1 -1;
+#X floatatom 498 -26 20 0 0 0 - ORIGINALLENGTH -;
+#X text 497 -47 ORIGNAL LENGTH;
+#X floatatom 711 -26 20 0 0 0 - USERLENGTH -;
+#X text 710 -46 USERTABLE LENGTH;
+#X obj 351 -170 hsl 128 15 0 1 0 0 TABLESIZE empty empty -2 -8 0 10
+-260097 -1 -1 0 1;
+#X obj 351 -108 hsl 128 15 0 1 0 0 TABLESTART empty empty -2 -8 0 10
+-260097 -1 -1 0 1;
+#X obj 352 -50 hsl 128 15 0 1 0 0 TABLESMOOTHER empty empty -2 -8 0
+10 -260097 -1 -1 0 1;
+#X obj 345 -196 cnv 10 140 20 empty empty SIZE 50 10 1 14 -257985 -66577
+0;
+#X obj 345 -137 cnv 10 140 20 empty empty START_POINT 25 10 1 14 -257985
+-66577 0;
+#X obj 345 -75 cnv 10 140 20 empty empty SMOOTHING 25 10 1 14 -257985
+-66577 0;
+#X obj 711 -193 cnv 15 200 140 empty empty empty 20 12 0 14 -94158
+-66577 0;
+#X obj 498 -193 cnv 15 200 140 empty empty empty 20 12 0 14 -94158
+-66577 0;
+#X floatatom 351 -26 20 0 0 0 - FADELENGTH -;
+#X obj 711 -68 tgl 15 0 empty LOADING X=LOADING! 17 5 1 10 -262144
+-258113 -258113 0 10;
+#X obj 900 310 vsl 25 200 0 127 0 0 VOL empty GAIN -5 -15 1 15 -258113
+-257985 -257985 0 1;
+#X obj 750 308 tgl 20 0 MUTE empty MUTE -4 -10 1 15 -258113 -257985
+-257985 0 1;
+#X obj -343 97 knob 32 32 0 1 0 0 revDiff empty DIFFUSION -10 -8 0
+12 -262144 -262144 -262144 0 1;
+#X obj -263 36 knob 32 32 0.5 0.9 1 0 revTime empty REVERB_TIME -15
+-8 0 12 -262144 -262144 -262144 0 1;
+#X obj -265 96 knob 32 32 20 12000 0 0 revLPF empty LPF 0 -8 0 12 -262144
+-262144 -262144 0 1;
+#X obj -204 69 knob 32 32 0 1 0 0 revDW loadbang DRY/WET -10 -8 0 12
+-262144 -262144 -262144 3100 1;
+#X obj -339 36 knob 33 33 0 30 0 0 preDel empty PRE_DELAY -15 -8 1
+12 -262144 -262144 -262144 0 1;
+#X obj -181 190 knob 32 32 0 1 0 0 DryWet loadbang DRY/WET -5 -8 0
+12 -262144 -262144 -262144 3100 1;
+#X obj -341 191 knob 32 32 0 1000 0 0 DTime empty DELAY_TIME -15 -8
+0 12 -262144 -262144 -262144 0 1;
+#X obj -259 190 knob 32 32 0 0.99 0 0 feedback empty FEEDBACK -10 -8
+0 12 -262144 -262144 -262144 0 1;
+#X obj -351 -14 cnv 10 55 30 empty empty empty 20 12 0 14 -4032 -66577
+0;
+#X text -305 67 comment;
+#X text -335 0 ON/OFF;
+#X obj -351 1 tgl 15 0 revON1 empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text -351 -16 REVERB;
+#X obj -346 142 cnv 10 55 30 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X text -331 156 ON/OFF;
+#X obj -347 157 tgl 15 0 DELON1 empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text -347 140 DELAY;
+#X obj -172 290 knob 32 32 0 1 0 0 flangerDW loadbang DRY/WET -8 -8
+1 12 -262144 -262144 -262144 3100 1;
+#X obj -237 290 knob 32 32 0 0.99 0 0 flangerFeed empty FEEDBACK -8
+-8 0 12 -262144 -262144 -262144 0 1;
+#X obj -296 290 knob 32 32 0.1 10 0 0 flangerDepth empty DEPTH 0 -8
+0 12 -262144 -262144 -262144 0 1;
+#X obj -349 289 knob 32 32 0.01 2 0 0 flangerRate empty RATE 0 -8 0
+12 -262144 -262144 -262144 0 1;
+#X obj -347 234 cnv 10 55 30 empty empty empty 20 12 0 14 -257985 -66577
+0;
+#X text -331 248 ON/OFF;
+#X obj -347 249 tgl 15 0 FLANON1 empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text -347 232 FLANGER;
+#X obj -347 333 cnv 10 55 30 empty empty empty 20 12 0 14 -261682 -66577
+0;
+#X obj -348 397 knob 32 32 0 3 0 0 chorRate1 empty RATE1 0 -8 1 12
+-262144 -262144 -262144 0 1;
+#X obj -288 397 knob 32 32 0 10 0 0 chorDepth1 empty DEPTH1 0 -8 1
+12 -262144 -262144 -262144 0 1;
+#X obj -213 397 knob 32 32 0 1 0 0 Voice1Level empty VOICE1_LEVEL -15
+-8 1 12 -262144 -262144 -262144 0 1;
+#X obj -344 478 knob 32 32 0 3 0 0 chorRate2 empty RATE2 0 -8 1 12
+-262144 -262144 -262144 0 1;
+#X obj -283 478 knob 32 32 0 10 0 0 chorDepth2 empty DEPTH2 0 -8 1
+12 -262144 -262144 -262144 0 1;
+#X obj -210 478 knob 32 32 0 1 0 0 Voice2Level empty VOICE2_LEVEL -15
+-8 1 12 -262144 -262144 -262144 0 1;
+#X obj -124 420 knob 32 32 0 1 0 0 chorDW loadbang DRY/WET -8 -8 1
+12 -262144 -262144 -262144 3100 1;
+#X text -332 348 ON/OFF;
+#X obj -347 348 tgl 15 0 CHORON1 empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text -347 331 CHORUS;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array UserTable 11 float 0;
+#X coords 0 1 10 -1 200 140 1 0 0;
+#X restore 711 -193 graph;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array file 67584 float 0;
+#X coords 0 1 67583 -1 200 140 1;
+#X restore 498 -193 graph;
+#X obj 755 382 vsl 15 128 0 2500 0 0 attack empty A 0 -9 1 15 -261234
+-1 -262144 0 1;
+#X obj 790 382 vsl 15 128 0 2500 0 0 decay loadbang_decay D 0 -9 1
+15 -261234 -1 -262144 12700 1;
+#X obj 827 382 vsl 15 128 0 1 0 0 sustain loadbang S 0 -9 1 15 -261234
+-1 -262144 12700 1;
+#X obj 860 382 vsl 15 128 0 2500 0 0 release empty R 0 -9 0 15 -261234
+-1 -262144 0 1;
+#X obj -282 1 hsl 128 15 0 0.5 0 0 Rsend empty REVERB_SEND -2 -8 0
+12 -204800 -1 -262144 0 1;
+#X obj -277 157 hsl 128 15 0 0.5 0 0 Dsend empty DELAY_SEND -2 -8 0
+12 -159808 -1 -262144 0 1;
+#X obj -278 250 hsl 128 15 0 0.5 0 0 Fsend empty FLANGER_SEND -2 -8
+0 12 -257985 -1 -262144 0 1;
+#X obj -278 349 hsl 128 15 0 0.5 0 0 Csend empty CHORUS_SEND -2 -8
+0 12 -261682 -1 -262144 0 1;
+#X obj 695 382 vsl 15 128 0.1 17 0 0 LFO empty LFO -5 -9 1 15 -261682
+-1 -262144 0 1;
+#X obj 655 497 tgl 15 0 LFOON empty ON/OFF -20 -10 1 15 -261682 -1
+-262144 0 1;
+#X obj -95 -126 image logo.gif;
+#X obj -368 -240 WAVESYNTHPROJ;
+#X coords 0 1005 1 1004 85 60 0;
